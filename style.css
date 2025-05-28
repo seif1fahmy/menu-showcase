@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+  --main-color: #4fc3f7; /* Light blue */
+  --main-color-light: #a7d8ff;
+  --main-color-dark: #3a9bdc;
+}
+
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url(124.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #eee;
+  overflow-x: hidden;
+  backdrop-filter: blur(13px);
+  
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#landing {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.section-card {
+  background: rgba(0, 0, 0, .7);
+  backdrop-filter: blur(20px);
+  width: 290px;
+  height: 60px;
+  border-radius: 20px;
+  /* box-shadow:
+    0 0 20px rgba(56, 232, 255, 0.05),
+    inset 5px 5px 15px #96ffad,
+    inset -5px -5px 15px #2f2f2f; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+text-shadow: 0px 0px 5px rgba(66, 71, 95, 0.822);
+}
+
+.section-card:hover {
+  transform: translateY(-15px);
+  box-shadow:
+    0 0 30px var(--main-color),
+    inset 5px 5px 15px #2a2a2a,
+    inset -5px -5px 15px #3c3c3c;
+}
+
+.section-card h2 {
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgb(66, 71, 95);
+  
+
+}
+
+.page {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  min-height: 100vh;
+  
+ 
+  padding: 40px 20px;
+  overflow-y: auto;
+  transform-origin: top;
+  animation-fill-mode: forwards;
+}
+
+.hidden {
+  display: none;
+}
+
+.back-btn {
+  color: var(--main-color);
+  cursor: pointer;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: inline-block;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.back-btn:hover {
+  color: var(--main-color-light);
+}
+
+.dropdown {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow:
+    0 0 10px var(--main-color-light);
+  user-select: none;
+}
+
+.dropdown-header {
+  padding: 18px 24px;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--main-color);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+.dropdown-header:hover {
+  background: var(--main-color-light);
+  background: var(--main-color-light);
+  background: var(--main-color-light);
+  background: var(--main-color-light);
+  background: #4fc3f720; /* 20% opacity */
+}
+
+.arrow {
+  border: solid var(--main-color);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 6px;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+.arrow.down {
+  transform: rotate(135deg);
+}
+
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  background: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid var(--main-color-light);
+}
+
+.dropdown-content.open {
+  max-height: 500px;
+}
+
+.item {
+  padding: 15px 30px;
+  border-bottom: 1px solid var(--main-color-light);
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  color: #ddd;
+  cursor: default;
+  transition: background 0.25s ease;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.item:hover {
+  background: var(--main-color-light);
+  color: #fff;
+}
+
+.page-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--main-color);
+  margin-bottom: 30px;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%) scale(0.8); opacity: 0; }
+  to { transform: translateX(0) scale(1); opacity: 1; }
+}
+
+@keyframes slideOut {
+  from { transform: translateX(0) scale(1); opacity: 1; }
+  to { transform: translateX(-100%) scale(0.8); opacity: 0; }
+}
+
+/* Place inside your existing <style> block */
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item-name {
+  /* keeps default look, or adjust if you want */
+  font-size: 1em;
+}
+.item-price {
+  font-size: 1.4em;
+  font-weight: bold;
+  font-style: italic;
+  color: rgb(194, 255, 194);
+}
+
+/* Edit/Delete buttons */
+.btn-edit, .btn-delete {
+  background: transparent;
+  border: none;
+  color: var(--main-color);
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 8px;
+  user-select: none;
+  transition: color .2s ease;
+}
+.btn-edit:hover { color: var(--main-color-light); }
+.btn-delete:hover { color: #f44336; } /* Red for delete, keep it visible */
+#landing {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  justify-content: center; /* center vertically */
+  align-items: center; /* center horizontally */
+  height: 100vh; /* full viewport height for vertical centering */
+  gap: 40px; /* space between cards */
+}
+.three-dot-menu {
+  position: relative;
+  display: inline-block;
+}
+.three-dot-btn {
+  background: none;
+  border: none;
+  color: #ff8c00;
+  font-size: 20px;
+  cursor: pointer;
+  user-select: none;
+  padding: 0 5px;
+}
+.three-dot-dropdown {
+  position: absolute;
+  top: 24px;
+  right: 0;
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 4px;
+  z-index: 100;
+  min-width: 80px;
+}
+.three-dot-dropdown.hidden {
+  display: none;
+}
+.three-dot-option {
+  padding: 8px 12px;
+  cursor: pointer;
+  color: #eee;
+}
+.three-dot-option:hover {
+  background: #555;
+}
+i{
+  color: var(--main-color);
+}
+
+.admin-only{
+  background-color: none;
+}

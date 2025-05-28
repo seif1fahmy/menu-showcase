@@ -1,0 +1,42 @@
+{
+  "menu": {
+    "ice_cream": {
+      "name": "Ice Cream",
+      "subsections": {
+        "cones": {
+          "name": "Cones",
+          "items": {
+            "vanilla_cone": { "name": "Vanilla Cone", "price": 15 },
+            "chocolate_cone": { "name": "Chocolate Cone", "price": 20 }
+          }
+        },
+        "cups": {
+          "name": "Cups",
+          "items": {
+            "small_cup": { "name": "Small Cup", "price": 10 },
+            "large_cup": { "name": "Large Cup", "price": 18 }
+          }
+        }
+      }
+    },
+    "hot_drinks": {
+      "name": "Hot Drinks",
+      "subsections": {
+        "coffee": {
+          "name": "Coffee",
+          "items": {
+            "espresso": { "name": "Espresso", "price": 25 },
+            "latte": { "name": "Latte", "price": 30 }
+          }
+        },
+        "tea": {
+          "name": "Tea",
+          "items": {
+            "black_tea": { "name": "Black Tea", "price": 12 },
+            "green_tea": { "name": "Green Tea", "price": 15 }
+          }
+        }
+      }
+    }
+  }
+}
