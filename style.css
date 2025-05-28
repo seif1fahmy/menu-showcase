@@ -64,7 +64,7 @@ a {
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   user-select: none;
-text-shadow: 0px 0px 5px rgba(66, 71, 95, 0.822);
+/* text-shadow: 0px 0px 5px rgba(66, 71, 95, 0.822); */
 }
 
 .section-card:hover {
@@ -80,7 +80,8 @@ text-shadow: 0px 0px 5px rgba(66, 71, 95, 0.822);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: rgb(66, 71, 95);
+  -webkit-text-stroke: 1px rgb(157, 255, 209);
+  color: transparent;
   
 
 }
